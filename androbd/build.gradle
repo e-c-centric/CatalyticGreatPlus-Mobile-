@@ -1,0 +1,54 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+
+android {
+    compileSdk 34
+    defaultConfig {
+        applicationId 'com.fr3ts0n.ecu.gui.androbd'
+        minSdkVersion 17
+        // SDK 25 to allow background service mechanism for plugins
+        //noinspection ExpiredTargetSdkVersion
+        targetSdkVersion 25
+        versionCode 20614
+        versionName 'V1.0.0'
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        lintOptions {
+            // Override lint error on targetSdkVersion
+            abortOnError false
+        }
+    }
+
+    applicationVariants.configureEach { variant ->
+        variant.resValue "string", "app_version", variant.versionName
+    }
+
+    buildTypes {
+        release {
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+
+    productFlavors {
+    }
+    lint {
+        abortOnError false
+    }
+    namespace 'com.fr3ts0n.ecu.gui.androbd'
+}
+
+dependencies {
+    implementation project(':plugin')
+    implementation project(':library')
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.github.mik3y:usb-serial-for-android:3.8.1'
+    implementation 'com.github.anastr:speedviewlib:1.6.1'
+    implementation 'androidx.core:core-ktx:1.12.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    implementation 'com.google.android.material:material:1.11.0'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+}

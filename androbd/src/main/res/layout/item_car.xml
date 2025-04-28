@@ -1,0 +1,8 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical" android:padding="8dp">
+
+    <TextView android:id="@+id/tvLicensePlate" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="License Plate" android:textSize="18sp"/>
+
+    <Button android:id="@+id/btnUseVehicle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Use Vehicle" android:layout_marginEnd="8dp"/>
+
+    <Button android:id="@+id/btnRemoveCar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Remove Car"/>
+</LinearLayout>
