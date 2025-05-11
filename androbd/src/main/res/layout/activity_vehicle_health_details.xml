@@ -1,0 +1,80 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Most Recent State -->
+        <TextView
+            android:id="@+id/tvMostRecentState"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Most Recent State"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:paddingBottom="8dp" />
+        <!-- after your RUL LineChart: -->
+        <Button
+            android:id="@+id/btnTalkToCarMuse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Learn more about your car"
+            android:layout_marginTop="16dp" />
+
+        <!-- Remaining Useful Life Chart -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Remaining Useful Life"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:paddingTop="16dp" />
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/chartRUL"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginTop="8dp"
+            android:background="#E3F2FD"
+            android:padding="8dp" />
+
+        <!-- Car Health Chart -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Car Health"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:paddingTop="16dp" />
+
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/chartCarHealth"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginTop="8dp"
+            android:background="#E8F5E9"
+            android:padding="8dp" />
+
+        <!-- Predicted DTC Chart -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Predicted DTC"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:paddingTop="16dp" />
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/chartDTC"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginTop="8dp"
+            android:background="#FFF3E0"
+            android:padding="8dp" />
+
+    </LinearLayout>
+</ScrollView>

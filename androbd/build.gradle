@@ -11,6 +11,7 @@ android {
         targetSdkVersion 25
         versionCode 20614
         versionName 'V1.0.0'
+        multiDexEnabled true
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
@@ -51,4 +52,8 @@ dependencies {
     implementation 'androidx.recyclerview:recyclerview:1.2.1'
     implementation 'com.google.android.material:material:1.11.0'
     implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+    implementation 'androidx.multidex:multidex:2.0.1'
+    implementation "io.noties.markwon:core:4.6.2"
+
 }
