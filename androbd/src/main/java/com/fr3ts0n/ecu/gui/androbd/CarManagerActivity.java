@@ -90,7 +90,7 @@ public class CarManagerActivity extends AppCompatActivity {
         new AsyncTask<Void, Void, String>() {
             protected String doInBackground(Void... voids) {
                 try {
-                    URL url = new URL("http://137.184.208.235/api.php/fetch.php");
+                    URL url = new URL("http://137.184.18.27/api.php/fetch.php");
                     HttpURLConnection conn = (HttpURLConnection) url.openConnection();
                     conn.setRequestMethod("POST");
                     conn.setDoOutput(true);
@@ -170,7 +170,7 @@ public class CarManagerActivity extends AppCompatActivity {
         new AsyncTask<Void, Void, String>() {
             protected String doInBackground(Void... voids) {
                 try {
-                    URL url = new URL("http://137.184.208.235/api.php/add.php");
+                    URL url = new URL("http://137.184.18.27/api.php/add.php");
                     HttpURLConnection conn = (HttpURLConnection) url.openConnection();
                     conn.setRequestMethod("POST");
                     conn.setDoOutput(true);

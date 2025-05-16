@@ -94,7 +94,7 @@ class FileHelper {
 		final String mPath = getPath(context);
 		final String obdFileName = mPath + File.separator + getFileName() + ".obd";
 		final String csvFileName = mPath + File.separator + getFileName() + ".csv";
-		final String remoteUrl = "http://137.184.208.235/upload.php"; // Replace with your actual URL
+		final String remoteUrl = "http://137.184.18.27/upload.php"; // Replace with your actual URL
 
 		// Create progress dialog
 		progress = ProgressDialog.show(context,

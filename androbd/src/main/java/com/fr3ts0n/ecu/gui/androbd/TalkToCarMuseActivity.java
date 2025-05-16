@@ -36,7 +36,7 @@ public class TalkToCarMuseActivity extends AppCompatActivity {
         new AsyncTask<Void, Void, String>() {
             protected String doInBackground(Void... _voids) {
                 try {
-                    URL url = new URL("http://137.184.208.235/util.php/cai.php");
+                    URL url = new URL("http://137.184.18.27/util.php/cai.php");
                     HttpURLConnection conn = (HttpURLConnection) url.openConnection();
                     conn.setRequestMethod("POST");
                     conn.setDoOutput(true);

@@ -55,13 +55,13 @@ public class LoginActivity extends AppCompatActivity {
 
         // Handle register link click
         registerLink.setOnClickListener(v -> {
-            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://137.184.208.235"));
+            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://137.184.18.27"));
             startActivity(browserIntent);
         });
     }
 
     private void loginUser(String email, String password) {
-        String urlString = "http://137.184.208.235/api.php/auth.php?action=login";
+        String urlString = "http://137.184.18.27/api.php/auth.php?action=login";
 
         new Thread(() -> {
             try {
